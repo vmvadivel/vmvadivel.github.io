@@ -1,0 +1,37 @@
+---
+layout: default
+title: 404 - Page Not Found
+permalink: /404.html
+---
+
+<section class="error-page">
+  <div class="error-container">
+    <h1 class="error-code">404</h1>
+    
+    <pre class="error-message"><code>// Oops! Route not found
+
+function findPage(url) {
+  const page = database.find(url);
+  
+  if (!page) {
+    return {
+      status: 404,
+      message: "This page doesn't exist... yet"
+    };
+  }
+  
+  return page;
+}
+
+// Looks like you hit a null pointer 🤷‍♂️</code></pre>
+
+    <p class="error-text">
+      The page you're looking for seems to have taken an unexpected detour.
+    </p>
+    
+    <div class="error-links">
+      <a href="/" class="btn-primary">← Back to Home</a>
+      <a href="#projects" class="btn-secondary">View Projects</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,45 @@
+# Site Settings
+title: "Vadivel Mohanakrishnan"
+name: "Vadivel Mohanakrishnan (Vadi)"
+email: vmvadivel@gmail.com
+description: >-
+  Tech Executive and hands-on leader with 25+ years of experience in 
+  engineering and operations across EdTech, Fintech, and Telecom.
+baseurl: ""
+url: "https://vmvadivel.github.io"
+
+# Theme Configuration
+theme_mode: light  # Options: light or dark
+
+# Build settings
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+  - README.md
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: false

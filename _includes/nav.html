@@ -1,0 +1,19 @@
+<nav class="main-nav">
+  <div class="nav-container">
+    <div class="nav-brand">
+      <a href="#home">{{ site.name | split: " " | first }}</a>
+    </div>
+    
+    <ul class="nav-links">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#projects" class="nav-link">Side Hustles</a></li>
+      {% if site.posts.size > 0 %}
+      <li><a href="#blog" class="nav-link">Blog</a></li>
+      {% endif %}
+    </ul>
+    
+    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+      <span class="hamburger"></span>
+    </button>
+  </div>
+</nav>

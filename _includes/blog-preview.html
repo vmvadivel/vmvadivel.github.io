@@ -1,0 +1,33 @@
+{% if site.posts.size > 0 %}
+<section id="blog" class="blog-preview">
+  <div class="section-container">
+    <h2 class="section-title">Recent Posts</h2>
+    
+    <div class="blog-posts">
+      {% for post in site.posts limit:3 %}
+        <article class="blog-card">
+          <time class="blog-date" datetime="{{ post.date | date_to_xmlschema }}">
+            {{ post.date | date: "%B %d, %Y" }}
+          </time>
+          
+          <h3 class="blog-title">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </h3>
+          
+          {% if post.excerpt %}
+          <p class="blog-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+          {% endif %}
+          
+          <a href="{{ post.url | relative_url }}" class="blog-link">Read more →</a>
+        </article>
+      {% endfor %}
+    </div>
+    
+    {% if site.posts.size > 3 %}
+    <div class="blog-view-all">
+      <a href="/blog/" class="btn-secondary">View all posts</a>
+    </div>
+    {% endif %}
+  </div>
+</section>
+{% endif %}

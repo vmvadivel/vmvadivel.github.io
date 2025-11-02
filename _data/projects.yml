@@ -1,0 +1,35 @@
+- title: "Project Pulse / Virtual Buddy"
+  description: "Advanced RAG system for multi-document Q&A with hybrid retrieval (semantic + BM25), cross encoder reranking, and flexible LLM deployment. Switch between cloud (Groq) and local (Ollama) processing. Built with FastAPI, LangChain, Qdrant."
+  linkedin_post: "https://www.linkedin.com/posts/vmvadivel_built-a-rag-system-to-query-my-personal-records-activity-7386972878099050496-fx9D"
+  github: "https://github.com/vmvadivel/Project-Pulse"
+  tech:
+    - "Python"
+    - "FastAPI"
+    - "LangChain"
+    - "Qdrant"
+    - "RAG"
+    - "Ollama / Groq"
+  featured: true
+
+- title: "Feed Refiner"
+  description: "Feed Refiner is a Chrome extension (not published) that uses an AI model to filter your LinkedIn feed. Its purpose is to provide users with a more focused and relevant browsing experience."
+  linkedin_post: "https://www.linkedin.com/posts/vmvadivel_built-a-side-project-called-feed-refiner-activity-7371769608724402176-xXXs"
+  github: "https://github.com/vmvadivel/linkedin_filter"
+  tech:
+    - "JavaScript"
+    - "Groq API"
+    - "Prompt Engineering"
+    - "Chrome Extension Manifest V3"
+  featured: true
+
+- title: "Wordris"
+  description: "Wordris is a puzzle game blending Tetris and Scrabble, built entirely through natural language prompts using Lovable AI. Play by forming words from falling letter blocks in a fun, prompt-driven experience."
+  linkedin_post: "https://www.linkedin.com/posts/vmvadivel_wordris-falling-challenge-activity-7335884055646744578-rE64"
+  github: "https://github.com/vmvadivel/wordris-falling-challenge"
+  tech:
+    - "Lovable AI"
+    - "React"
+    - "TypeScript"
+    - "Tailwind CSS"
+    - "Vite"
+  featured: true
