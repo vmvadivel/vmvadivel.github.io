@@ -1,5 +1,5 @@
-- title: "Project Pulse / Virtual Buddy"
-  description: "Advanced RAG system for multi-document Q&A with hybrid retrieval (semantic + BM25), cross encoder reranking, and flexible LLM deployment. Switch between cloud (Groq) and local (Ollama) processing. Built with FastAPI, LangChain, Qdrant."
+- title: "Project Pulse"
+  description: "A privacy first, Advanced RAG system for accurate, multi-document Q&A over personal files. It features a pipeline with hybrid retrieval (Semantic + BM25) and cross-encoder re-ranking to ensure precision. It offers flexibility, allowing users to choose between the speed of Groq (Cloud) and guaranteed local processing via Ollama, putting data control squarely in the user's hands."
   links:
     - type: "article"
       url: "https://www.linkedin.com/posts/vmvadivel_built-a-rag-system-to-query-my-personal-records-activity-7386972878099050496-fx9D"
@@ -14,7 +14,7 @@
   featured: true
 
 - title: "Feed Refiner"
-  description: "Feed Refiner is a Chrome extension (not published) that uses an AI model to filter your LinkedIn feed. Its purpose is to provide users with a more focused and relevant browsing experience."
+  description: "Feed Refiner is a unpublished Chrome extension built to refine the LinkedIn browsing experience by filtering out unwanted content. It uses the Groq AI model to analyze posts in real-time based on customizable categories, giving users control to either blur or hide irrelevant updates and maintain a professional, focused feed."
   links:
     - type: "article"
       url: "https://www.linkedin.com/posts/vmvadivel_built-a-side-project-called-feed-refiner-activity-7371769608724402176-xXXs"
@@ -27,7 +27,7 @@
   featured: true
 
 - title: "Wordris"
-  description: "Wordris is a puzzle game blending Tetris and Scrabble, built entirely through natural language prompts using Lovable AI. Play by forming words from falling letter blocks in a fun, prompt-driven experience."
+  description: "Wordris is a creative puzzle game that merges the mechanics of Tetris with the word building challenge of Scrabble. It offers players a fun, fast paced experience where they form words from falling letter blocks. This project serves as a compelling demonstration of prompt engineering, as it was built start to finish using only natural language prompts via Lovable AI."
   links:
     - type: "demo"
       url: "https://wordris.lovable.app/"
@@ -37,6 +37,8 @@
       url: "https://github.com/vmvadivel/wordris-falling-challenge"
   tech:
     - "Lovable AI"
-    - "JavaScript"
-    - "Game Development"
+    - "React"
+    - "TypeScript"
+    - "Tailwind CSS"
+    - "Vite"
   featured: true
