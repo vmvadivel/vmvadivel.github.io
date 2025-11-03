@@ -158,6 +158,13 @@ main {
   color: var(--color-text-primary);
 }
 
+.hero-subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-md);
+  font-weight: 500;
+}
+
 .hero-location {
   display: flex;
   align-items: center;
@@ -227,7 +234,7 @@ main {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));  /* Increased from 320px */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: var(--spacing-md);
   margin-top: var(--spacing-lg);
 }
@@ -276,30 +283,43 @@ main {
 
 .project-links {
   display: flex;
-  flex-direction: row;  /* Force horizontal */
-  gap: 0.75rem;  /* Reduced gap */
+  flex-direction: row;
+  gap: 0.5rem;
   flex-wrap: wrap;
-  margin-top: auto;  /* Push to bottom of card */
+  margin-top: auto;
 }
 
 .project-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 0.75rem;  /* Reduced padding */
+  gap: 0.4rem;
+  padding: 0.4rem 0.75rem;
   color: var(--color-accent);
   text-decoration: none;
   border: 1px solid var(--color-accent);
   border-radius: 6px;
   font-weight: 500;
-  font-size: 0.813rem;  /* Slightly smaller font */
+  font-size: 0.813rem;
   transition: var(--transition);
-  white-space: nowrap;  /* Prevent text wrapping inside button */
+  white-space: nowrap;
 }
 
 .project-link:hover {
   background-color: var(--color-accent);
   color: white;
+}
+
+.project-link svg {
+  flex-shrink: 0;
+}
+
+.project-link-demo {
+  background-color: var(--color-accent);
+  color: white;
+}
+
+.project-link-demo:hover {
+  background-color: var(--color-accent-hover);
 }
 
 /* Blog Preview Section */
