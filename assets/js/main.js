@@ -4,20 +4,26 @@ document.addEventListener('DOMContentLoaded', function() {
   
   navLinks.forEach(link => {
     link.addEventListener('click', function(e) {
-      e.preventDefault();
+      const href = this.getAttribute('href');
       
-      const targetId = this.getAttribute('href');
-      const targetSection = document.querySelector(targetId);
-      
-      if (targetSection) {
-        const navHeight = document.querySelector('.main-nav').offsetHeight;
-        const targetPosition = targetSection.offsetTop - navHeight;
+      // Only handle hash links on the current page
+      if (href.startsWith('#')) {
+        e.preventDefault();
         
-        window.scrollTo({
-          top: targetPosition,
-          behavior: 'smooth'
-        });
+        const targetId = href;
+        const targetSection = document.querySelector(targetId);
+        
+        if (targetSection) {
+          const navHeight = document.querySelector('.main-nav').offsetHeight;
+          const targetPosition = targetSection.offsetTop - navHeight;
+          
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
       }
+      // Let browser handle regular links and cross-page hash links
     });
   });
   
@@ -31,24 +37,27 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
-  // Active nav link on scroll
-  window.addEventListener('scroll', function() {
-    const sections = document.querySelectorAll('section[id]');
-    const scrollPosition = window.scrollY + 100;
-    
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.offsetHeight;
-      const sectionId = section.getAttribute('id');
+  // Active nav link on scroll (only on homepage with sections)
+  if (document.querySelector('#home')) {
+    window.addEventListener('scroll', function() {
+      const sections = document.querySelectorAll('section[id]');
+      const scrollPosition = window.scrollY + 100;
       
-      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-        navLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === `#${sectionId}`) {
-            link.classList.add('active');
-          }
-        });
-      }
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute('id');
+        
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            const linkHref = link.getAttribute('href');
+            if (linkHref === `#${sectionId}` || linkHref.endsWith(`#${sectionId}`)) {
+              link.classList.add('active');
+            }
+          });
+        }
+      });
     });
-  });
+  }
 });

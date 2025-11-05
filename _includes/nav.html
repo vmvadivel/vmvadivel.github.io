@@ -1,14 +1,24 @@
 <nav class="main-nav">
   <div class="nav-container">
     <div class="nav-brand">
-      <a href="#home">{{ site.name | split: " " | first }}</a>
+      {% if page.layout == "home" or page.url == "/" %}
+        <a href="#home">{{ site.name | split: " " | first }}</a>
+      {% else %}
+        <a href="{{ '/' | relative_url }}">{{ site.name | split: " " | first }}</a>
+      {% endif %}
     </div>
     
     <ul class="nav-links">
-      <li><a href="#home" class="nav-link">Home</a></li>
-      <li><a href="#projects" class="nav-link">Side Hustles</a></li>
+      {% if page.layout == "home" or page.url == "/" %}
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#projects" class="nav-link">Side Hustles</a></li>
+      {% else %}
+        <li><a href="{{ '/' | relative_url }}#home" class="nav-link">Home</a></li>
+        <li><a href="{{ '/' | relative_url }}#projects" class="nav-link">Side Hustles</a></li>
+      {% endif %}
+      
       {% if site.posts.size > 0 %}
-      <li><a href="#blog" class="nav-link">Blog</a></li>
+      <li><a href="{{ '/blog/' | relative_url }}" class="nav-link">Blog</a></li>
       {% endif %}
     </ul>
     
