@@ -21,7 +21,7 @@ title: Blog
           {% if post.description %}
             <p class="blog-excerpt">{{ post.description }}</p>
           {% elsif post.excerpt %}
-            <p class="blog-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+            <p class="blog-excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
           {% endif %}
           
           <a href="{{ post.url | relative_url }}" class="blog-link">Read more →</a>
