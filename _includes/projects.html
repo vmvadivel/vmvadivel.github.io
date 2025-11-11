@@ -18,13 +18,29 @@
           <div class="project-links">
             {% for link in project.links %}
               {% if link.type == 'demo' %}
-                <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer" class="project-link project-link-demo">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polygon points="10 8 16 12 10 16 10 8"></polygon>
-                  </svg>
-                  Demo
-                </a>
+                {% if link.format == 'live' %}
+                  <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer" class="project-link project-link-live">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                    </svg>
+                    Live
+                  </a>
+                {% else %}
+                  <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer" class="project-link project-link-demo">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+                      <line x1="7" y1="2" x2="7" y2="22"></line>
+                      <line x1="17" y1="2" x2="17" y2="22"></line>
+                      <line x1="2" y1="12" x2="22" y2="12"></line>
+                      <line x1="2" y1="7" x2="7" y2="7"></line>
+                      <line x1="2" y1="17" x2="7" y2="17"></line>
+                      <line x1="17" y1="17" x2="22" y2="17"></line>
+                      <line x1="17" y1="7" x2="22" y2="7"></line>
+                    </svg>
+                    Demo
+                  </a>
+                {% endif %}
               {% elsif link.type == 'article' %}
                 <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer" class="project-link">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">

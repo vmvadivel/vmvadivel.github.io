@@ -1,6 +1,9 @@
 - title: "Project Pulse"
   description: "A privacy first, Advanced RAG system for accurate, multi-document Q&A over personal files. It features a pipeline with hybrid retrieval (Semantic + BM25) and cross-encoder re-ranking to ensure precision. It offers flexibility, allowing users to choose between the speed of Groq (Cloud) and guaranteed local processing via Ollama, putting data control squarely in the user's hands."
   links:
+    - type: "demo"
+      url: "https://raw.githubusercontent.com/vmvadivel/Project-Pulse/main/docs/images/ProjectPulseDemo.gif"
+      format: "gif"
     - type: "article"
       url: "https://www.linkedin.com/posts/vmvadivel_built-a-rag-system-to-query-my-personal-records-activity-7386972878099050496-fx9D"
     - type: "code"
@@ -31,6 +34,7 @@
   links:
     - type: "demo"
       url: "https://wordris.lovable.app/"
+      format: "live"
     - type: "article"
       url: "https://www.linkedin.com/posts/vmvadivel_wordris-falling-challenge-activity-7335884055646744578-rE64"
     - type: "code"
@@ -41,4 +45,17 @@
     - "TypeScript"
     - "Tailwind CSS"
     - "Vite"
+  featured: true
+
+- title: "NotesBuddy"
+  description: "NotesBuddy began as a COVID lockdown side project to learn Android development hands-on. The goal: build a simple, intuitive notes app for organising thoughts effortlessly. Within months, it was desiged, developed, and published on Google Play, teaching me the full Android lifecycle: design, development, publishing, secure key management (hard lesson!), and rapid prototyping under constraints. Though retired after losing signing keys, NotesBuddy remains a milestone and a reminder that that best way to learn is by building."
+  links:
+    - type: "article"
+      url: "https://www.linkedin.com/posts/vmvadivel_notesbuddy-version-103-activity-6690204271012646912-yqyg"
+    - type: "code"
+      url: "https://github.com/vmvadivel/NotesBuddy"
+  tech:
+    - "JAVA"
+    - "Android SDK"
+    - "SQLite"
   featured: true
