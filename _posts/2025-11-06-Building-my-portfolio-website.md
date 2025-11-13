@@ -115,7 +115,11 @@ The build process had a few hiccups. What worked locally didn't always work the 
 
 ## What's Next
 
-Planning to set up a **custom domain** once I get around to registering one. The `.github.io` URL works fine, but having a personal domain would be nice. That'll probably turn into another post about DNS setup and configuration.
+✓ **Custom Domain is Live now** The `.github.io` URL was fine for launching, but I finally got around to registering a custom domain, **vadivel.dev**, and setting up the DNS records in Cloudflare. It took a little time to get the CNAME and A records sorted, but traffic is now correctly routed from my personal domain to GitHub Pages. It was a good exercise in DNS setup and configuration.
+
+Thinking about adding **search functionality** eventually, but it doesn't make sense until there are more posts to search through. Maybe after 10+ posts it will be worth the time.
+
+And of course, **more posts** about the projects listed on the site. Each one has interesting technical decisions and tradeoffs that might be worth writing about.
 
 Thinking about adding **search functionality** eventually, but it doesn't make sense until there are more posts to search through. Maybe after 10+ posts it'll be worth the time.
 
