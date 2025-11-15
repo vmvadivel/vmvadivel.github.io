@@ -35,6 +35,15 @@ document.addEventListener('DOMContentLoaded', function() {
       navLinksContainer.classList.toggle('active');
       mobileMenuToggle.classList.toggle('active');
     });
+    
+    // Close menu when clicking a nav link
+    const navLinks = navLinksContainer.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        navLinksContainer.classList.remove('active');
+        mobileMenuToggle.classList.remove('active');
+      });
+    });
   }
   
   // Active nav link on scroll (only on homepage with sections)
