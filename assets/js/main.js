@@ -23,17 +23,17 @@ document.addEventListener('DOMContentLoaded', function() {
           });
         }
       }
-      // Let browser handle regular links and cross-page hash links
     });
   });
   
-  // Mobile menu toggle (placeholder for future implementation)
+  // Mobile menu toggle
   const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
   const navLinksContainer = document.querySelector('.nav-links');
   
   if (mobileMenuToggle) {
     mobileMenuToggle.addEventListener('click', function() {
       navLinksContainer.classList.toggle('active');
+      mobileMenuToggle.classList.toggle('active');
     });
   }
   

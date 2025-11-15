@@ -142,6 +142,50 @@ body {
   background: none;
   border: none;
   cursor: pointer;
+  padding: 8px;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-text-primary);
+  transition: var(--transition);
+}
+
+.hamburger {
+  position: relative;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  left: 0;
+}
+
+.hamburger::before {
+  top: -8px;
+}
+
+.hamburger::after {
+  top: 8px;
+}
+
+.mobile-menu-toggle.active .hamburger {
+  background-color: transparent;
+}
+
+.mobile-menu-toggle.active .hamburger::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.mobile-menu-toggle.active .hamburger::after {
+  top: 0;
+  transform: rotate(-45deg);
 }
 
 /* Main Content */
@@ -177,7 +221,7 @@ main {
 /* Hero Section with Gradient Background */
 .hero {
   background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
-  padding: var(--spacing-xl) 0;
+  padding: var(--spacing-md) 0;
   text-align: center;
 }
 
@@ -1095,6 +1139,30 @@ main {
   
   .nav-links {
     display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid var(--color-border);
+    flex-direction: column;
+    gap: 0;
+    padding: var(--spacing-sm) 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: var(--spacing-xs) var(--spacing-md);
+  }
+
+  .nav-link {
+    display: block;
+    padding: var(--spacing-xs) 0;
   }
   
   .mobile-menu-toggle {
