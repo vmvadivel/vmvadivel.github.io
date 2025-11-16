@@ -835,6 +835,8 @@ main {
 /* Enhanced Post Content */
 .post-content {
   max-width: 750px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .post-content h2 {
@@ -868,6 +870,7 @@ main {
   font-weight: 500;
   border-bottom: 2px solid transparent;
   transition: var(--transition);
+  word-break: break-word;
 }
 
 .post-content a:hover {
@@ -890,6 +893,7 @@ main {
   border-radius: 4px;
   font-size: 0.9em;
   font-family: 'Monaco', 'Courier New', monospace;
+  word-break: break-word;
 }
 
 .post-content pre {
@@ -1109,6 +1113,8 @@ main {
 @media (max-width: 968px) {
   .post-layout {
     grid-template-columns: 1fr;
+    padding: 0 var(--spacing-sm);
+    gap: var(--spacing-md);
   }
   
   .post-sidebar {
@@ -1124,13 +1130,26 @@ main {
   }
   
   .post-meta-sidebar {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: var(--spacing-sm);
+    display: block;
+  }
+  
+  .meta-item,
+  .sidebar-section,
+  .share-buttons {
+    width: 100%;
   }
 }
 
 @media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+  
+  * {
+    max-width: 100%;
+  }
+  
   :root {
     --font-size-3xl: 2rem;
     --font-size-2xl: 1.5rem;
@@ -1193,6 +1212,17 @@ main {
   
   .post-header {
     padding: var(--spacing-md) 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .post-header-content {
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .post-title {
+    font-size: 2rem;
+    word-wrap: break-word;
   }
   
   .post-content h2 {
@@ -1223,9 +1253,44 @@ main {
   
   .post-content {
     font-size: 1rem;
+    max-width: 100%;
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .post-content h2 {
+    font-size: 1.5rem;
+    padding-left: var(--spacing-sm);
+  }
+  
+  .post-content h3 {
+    font-size: 1.25rem;
+  }
+  
+  .post-content p {
+    font-size: 1rem;
   }
   
   .post-content > p:first-of-type {
     font-size: 1.125rem;
+  }
+  
+  .post-content pre {
+    padding: var(--spacing-sm);
+    margin-left: calc(-1 * var(--spacing-sm));
+    margin-right: calc(-1 * var(--spacing-sm));
+    border-radius: 0;
+    max-width: 100vw;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .post-content pre code {
+    white-space: pre;
+    word-wrap: normal;
+  }
+  
+  .post-content ul,
+  .post-content ol {
+    padding-left: 1.5rem;
   }
 }
